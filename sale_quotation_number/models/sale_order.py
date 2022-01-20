@@ -25,7 +25,7 @@ class SaleOrder(models.Model):
         self.ensure_one()
         if default is None:
             default = {}
-        default["name"] = "/"
+        default["name"] = _("New")
         if self.origin and self.origin != "":
             default["origin"] = self.origin + ", " + self.name
         else:
